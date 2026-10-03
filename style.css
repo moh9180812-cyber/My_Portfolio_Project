@@ -334,6 +334,7 @@ header .nav-links .links a:hover {
         }
         .about .container .info {
             color: white;
+            max-width: 100%;
         }
         .about .container .info .first {
             letter-spacing: 3px;
@@ -377,18 +378,31 @@ header .nav-links .links a:hover {
         }
         .about .container .info .mixed-box {
             display: flex;
-            gap: 10px;
+            gap: 15px;
             justify-content: space-between;
             margin-top: 25px;    
+            flex-wrap: wrap;
         }
         .about .container .info .mixed-box .line {
             width: 1px;
             background-color: var(--secondary-text);
             height: 99px;
         }
+        @media (max-width: 720px) {
+            .about .container .info .mixed-box {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .about .container .info .mixed-box .line {
+                width: 99px;
+                height: 1px;
+                display: inline-block;
+                margin: 0 30px;
+            }
+        }
         .about .info .mixed-box .box {
             display: flex;
-            gap: 10px;
+            gap: 15px;
         }
         .about .info .mixed-box .box .text span {
             font-size: 12px;
