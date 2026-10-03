@@ -21,6 +21,10 @@ body {
     padding: 0;
     background-color: var(--bg-color);
 }
+.container {
+    margin-left: 50px;
+    margin-right: 50px;
+}
 /* Start Style of Button */
 body .arrow {
     display: none;
@@ -174,7 +178,7 @@ header .nav-links .links a:hover {
     }
     @media (max-width: 850px) {
         .hero .info {
-            margin: 0 50px;
+            margin: 0 30px;
         }
     }
     @media (max-width: 767px) {
@@ -283,17 +287,13 @@ header .nav-links .links a:hover {
     }
     /* End Hero Section */
     /* Start About Me Section */
-    main .about {
-        position: relative;
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
     .about .container {
-        margin-left: 50px;
-        margin-right: 50px;
         display: flex;
         gap: 40px;
         align-items: center;
+        position: relative;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
     @media (max-width: 991px) {
             .about .container {
@@ -303,7 +303,7 @@ header .nav-links .links a:hover {
     .about .container::after {
             content: "";
             position: absolute;
-            width: 90%;
+            width: 100%;
             height: 1px;
             background-color: white;
             left: 50%;
@@ -436,13 +436,25 @@ header .nav-links .links a:hover {
         }
     /* End About Me Section */
     /* Start Skills */
-    main .skills {
-        height: 100vb;
-        position: relative;
-        margin-left: 30px;
-        margin-right: 30px;
+    .skills {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    main .skills::after {
+    .skills .container {
+        position: relative;
+        display: flex;
+        gap: 40px;
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+    @media (max-width: 1199px) {
+        .skills .container {
+            flex-direction: column;
+        }
+    }
+    .skills .container::after {
             content: "";
             position: absolute;
             width: 100%;
@@ -451,7 +463,247 @@ header .nav-links .links a:hover {
             left: 50%;
             transform: translateX(-50%);
             bottom: 0;
+    }
+    .skills .title {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills .title .first {
+       position: relative;
+       font-size: 18px;
+       text-align: center;
+       width: 200px;
+    }
+    .skills .title .first::before {
+       content: "";
+       position: absolute;
+       width: 60px;
+       height: 2px;
+       background-color: #E53935;
+       top: 50%;
+       transform: translateY(-50%);
+       left: 0;
+    }
+    .skills .title .first::after {
+       content: "";
+       position: absolute;
+       width: 60px;
+       height: 2px;
+       background-color: #E53935;
+       top: 50%;
+       transform: translateY(-50%);
+       right: 0;
+    }
+    .skills .title .title-name {
+       font-size: 60px;
+       font-weight: bold;
+       letter-spacing: 2px;
+    }
+    .skills .title .title-name span {
+       color: var(--primary-hover);
+    }
+    .skills .title .p {
+       color: var(--secondary-text);
+       letter-spacing: 2px;
+    }
+    .skills .skills-box {
+        width: 40%;
+        border-radius: 10px;
+        box-shadow: -10px -10px 13px -10px var(--primary-hover);
+        border: 0.5px solid #212121;
+        background-color: #15151594;
+        overflow: hidden;
+        height: fit-content;
+        position: relative;
+        transition: 0.5s;
+    }
+    .skills .skills-box:hover {
+        box-shadow: 10px 10px 13px -10px var(--primary-hover);
+    }
+    .skills .skills-box::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        box-shadow: 4px 4px 56px 29px var(--primary-hover);
+        right: 0;
+    }
+    @media (max-width: 1199px) {
+        .skills .skills-box {
+            width: 100%;
         }
+    }
+    .skills .skills-box .skills-img {
+        width: 100%;
+        border-bottom-right-radius: 260px 140px;
+        overflow: hidden;
+        box-shadow: 7px 5px 2px -7px var(--primary-hover), -7px 5px 6px -5px var(--primary-hover);
+        height: 250px;
+    }
+    .skills .skills-box .skills-img img {
+        width: 100%;
+    }
+    .skills .skills-box .info {
+        margin: 0 20px;
+    }
+    .skills .skills-box .info h2 {
+        margin-bottom: 5px;
+    }
+    .skills .skills-box .info h3 {
+        margin-top: 0;
+        color: var(--primary-hover);
+    }
+    .skills .skills-box .info p {
+        color: var(--secondary-text);
+        margin: 0 0 20px;
+    }
+    .skills .skills-box .info .skills-line {
+        width: 100%;
+        background-color: #5d5858;
+        height: 1px;
+        margin-bottom: 20px;
+    }
+    .skills .skills-box .info .details {
+        display: flex;
+        justify-content: space-between;
+    }
+    .skills .skills-box .info .details .line-box {
+        width: 1px;
+        height: 95px;
+        background-color: var(--secondary-text);
+    }
+    .skills .skills-box .info .details .skill-box {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+    }
+    .skills .skills-box .info .details .skill-box i {
+        content: var(--fa);
+        font-size: 22px;
+        color: var(--primary-hover);
+    }
+    .skills .skills-box .info .details .skill-box span {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    .skills .skills-box .info .details .skill-box p {
+        font-size: 14px;
+        color: var(--secondary-text);
+        text-align: center;
+    }
+
+    .skills .container .skills-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .skills .container .skills-container .skill-box {
+        display: flex;
+        border: 1px solid #5d5858a4;
+        border-radius: 10px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    .skills .container .skills-container .skill-box::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-hover);
+        transition: 1s;
+    }
+    .skills .container .skills-container .skill-box::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-hover);
+        transition: 1s;
+    }
+    .skills .container .skills-container .skill-box:hover::before,
+    .skills .container .skills-container .skill-box:hover::after {
+        width: 100%;
+    } 
+    @media (max-width: 767px) {
+        .skills .container .skills-container .skill-box {
+          padding-bottom: 40px;
+        }
+        .skills .skills-container .skill-box .percentage  {
+            transform: translatey(55px);
+        }
+        .skills .skills-container .skill-box .per-num {
+            transform: translateY(55px);
+        }
+    }
+    .skills .container .skills-container .skill-box .icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0px -8px 13px -11px var(--primary-hover), inset 0px 8px 13px -10px var(--primary-hover), inset 8px 0 13px -10px var(--primary-hover), inset -8px 0px 13px -10px var(--primary-hover);
+    }
+    .skills .container .skills-container .skill-box .icon i {
+        color: var(--primary-hover);
+    }
+    .skills .container .skills-container .skill-box .skill-info {
+        margin-left: 20px;
+    }
+    .skills .container .skills-container .skill-box .skill-info .skill-name {
+        font-size: 16px;
+        margin: 0;
+        background: transparent;
+    }
+    .skills .container .skills-container .skill-box .skill-info .skills {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .skills .container .skills-container .skill-box .skill-info .skills span {
+        padding:  5px 10px;
+        color: white;
+        border-radius: 10px;
+        font-size: 12px;
+        background-color: var(--border-color);
+        border: var(--secondary-text);
+    }
+    .skills .skills-container .skill-box .percentage {
+        position: absolute;
+        right: 65px;
+        width: 50%;
+        background-color: var(--border-color);
+        height: 10px;
+        border-radius: 10px;
+        top: 30px;
+        overflow: hidden;
+    }
+    .skills .skills-container .skill-box .percentage::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: var(--width);
+        height: 10px;
+        background-color: var(--primary-hover);
+    }
+    .skills .skills-container .skill-box .per-num {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        position: absolute;
+    }
     /* End Skills */
     /* Start Projects Section */
     main .projects {
