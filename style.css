@@ -143,8 +143,25 @@ header .nav-links .links a {
     color: white;
     transition: 0.3s;
     font-size: 18px;
+    position: relative;
+}
+header .nav-links .links a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-hover);
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+header .nav-links .links a:hover::before {
+    width: 100%;
 }
 header .nav-links .links a:hover {
+    color: var(--primary-hover);
+}
+header .nav-links .links .active {
     color: var(--primary-hover);
 }
 /* End Header */
