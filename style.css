@@ -764,7 +764,56 @@ header .nav-links .links .active {
             left: 50%;
             transform: translateX(-50%);
             bottom: 0;
-        }
+    }
+    .projects .title {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects .title .first {
+       position: relative;
+       font-size: 18px;
+       text-align: center;
+       width: 250px;
+       color: var(--primary-color);
+    }
+    .projects .title .first::before {
+       content: "";
+       position: absolute;
+       width: 60px;
+       height: 2px;
+       background-color: #E53935;
+       top: 50%;
+       transform: translateY(-50%);
+       left: 0;
+    }
+    .projects .title .first::after {
+       content: "";
+       position: absolute;
+       width: 60px;
+       height: 2px;
+       background-color: #E53935;
+       top: 50%;
+       transform: translateY(-50%);
+       right: 0;
+    }
+    .projects .title .title-name {
+       font-size: 60px;
+       font-weight: bold;
+       letter-spacing: 2px;
+       color: var(--primary-color);
+    }
+    .projects .title .title-name span {
+       color: white;
+    }
+    .projects .title .p {
+       color: var(--secondary-text);
+       letter-spacing: 2px;
+       text-align: center;
+       max-width: 700px;
+    }
     /* End Projects Section */
     /* Start Contact Section */
     main .contact {
