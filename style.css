@@ -748,7 +748,7 @@ header .nav-links .links .active {
         }
         
     }
-    @media (max-width: 300px) {
+    @media (max-width: 690px) {
         .skills .skills-container .skill-box .long  {
             top: 40%;
         }
