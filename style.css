@@ -678,17 +678,6 @@ header .nav-links .links .active {
     .skills .container .skills-container .skill-box:hover::after {
         width: 100%;
     } 
-    @media (max-width: 767px) {
-        .skills .container .skills-container .skill-box {
-          padding-bottom: 40px;
-        }
-        .skills .skills-container .skill-box .percentage  {
-            transform: translatey(55px);
-        }
-        .skills .skills-container .skill-box .per-num {
-            transform: translateY(55px);
-        }
-    }
     .skills .container .skills-container .skill-box .icon {
         width: 50px;
         height: 50px;
@@ -746,6 +735,26 @@ header .nav-links .links .active {
         right: 20px;
         top: 10px;
         position: absolute;
+    }
+    @media (max-width: 767px) {
+        .skills .container .skills-container .skill-box {
+          padding-bottom: 40px;
+        }
+        .skills .skills-container .skill-box .percentage  {
+            transform: translatey(55px);
+        }
+        .skills .skills-container .skill-box .per-num {
+            transform: translateY(55px);
+        }
+        
+    }
+    @media (max-width: 300px) {
+        .skills .skills-container .skill-box .long  {
+            top: 40%;
+        }
+        .skills .skills-container .skill-box .long-num {
+            top: 25%;
+        }
     }
     /* End Skills */
     /* Start Projects Section */
