@@ -746,16 +746,19 @@ header .nav-links .links .active {
         .skills .skills-container .skill-box .per-num {
             transform: translateY(55px);
         }
+        .skills .container .skills-container .skill-box .skill-info .skill-name {
+            font-size: 14px;
+        }
         
     }
-    @media (max-width: 690px) {
+    /* @media (max-width: 690px) {
         .skills .skills-container .skill-box .long  {
             top: 40%;
         }
         .skills .skills-container .skill-box .long-num {
             top: 25%;
         }
-    }
+    } */
     /* End Skills */
     /* Start Projects Section */
     main .projects {
