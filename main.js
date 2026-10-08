@@ -102,6 +102,8 @@ classs.forEach((btn) => {
             landing.classList.add("active");
         } else if (this === platform) {
             platform.classList.add("active");
+        }else if (this === all) {
+            all.classList.add("active");
         }
     });
 });

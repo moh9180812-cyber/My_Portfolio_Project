@@ -761,7 +761,7 @@ header .nav-links .links .active {
     main .projects {
         position: relative;
         padding-top: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
     .projects .container {
         margin-top: 50px;
@@ -769,7 +769,7 @@ header .nav-links .links .active {
     main .projects::after {
         content: "";
         position: absolute;
-        width: 100%;
+        width: 90%;
         height: 1px;
         background-color: white;
         left: 50%;
@@ -882,10 +882,42 @@ header .nav-links .links .active {
         border-radius: 15px;
         padding: 10px;
         background-color: #1f202661;
+        overflow: hidden;
     }
-    .projects .container .projects-container .project-box img {
+    .projects .container .projects-container .project-box .image {
+        overflow: hidden;
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        height: fit-content;
+    }
+    .projects .container .projects-container .project-box .image img {
         width: 100%;
         border-radius: 15px;
+        transition: 0.5s ease;
+        height: 100%;
+    }
+    .projects .container .projects-container .project-box .image::before {
+        content: "Enter on live button to show website in live";
+        color: black;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        background-color: #292525bb;
+        transition: 0.5s;
+        bottom: -50px;
+        color: var(--text-color);
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }
+    .projects .container .projects-container .project-box .image:hover::before {
+        bottom: 0;
+    }
+    .projects .container .projects-container .project-box:hover .image img {
+        transform: scale(1.5) rotate(5deg);
     }
     .projects .projects-container .project-box .info {
         padding: 10px;
@@ -946,12 +978,22 @@ header .nav-links .links .active {
         color: var(--secondary-text);
         display: flex;
         gap: 5px;
+        transition: 0.3s ease;
+    }
+    .projects .projects-container .project-box .info .buttons .first-buttons .github-button:hover {
+        transform: scale(1.05);
+        color: var(--text-color);
     }
     .projects .projects-container .project-box .info .buttons .first-buttons .live-button {
         text-decoration: none;
         color: var(--primary-hover);
         display: flex;
         gap: 5px;
+        transition: 0.3s ease;
+    }
+    .projects .projects-container .project-box .info .buttons .first-buttons .live-button:hover {
+        transform: scale(1.05);
+        color: red;
     }
     .projects .projects-container .project-box .info .buttons .second-button {
         border-radius: 50%;
@@ -961,10 +1003,76 @@ header .nav-links .links .active {
     .projects .projects-container .project-box .info .buttons .second-button .details-button {
         color: var(--primary-color);
     }
+    .projects .projects-container .project-box .info .buttons .second-button .details-button i:hover {
+        transform: translateX(2px);
+        transition: 0.3s ease;
+    }
+    .projects .projects-container .project-box .info .buttons .second-button .details-button i:hover .details-button {
+        color: red;
+    }
     .projects .projects-container .project-box .info .buttons .second-button .details-button i {
         color: var(--primary-color);
         font-size: 14px;
     }
+
+    /* Start Style Of GitHub Profile Btn */
+    .projects .github-profile {
+        margin-top: 50px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        color: #e85656;
+        padding: 5px 20px;
+        border: 1px solid red;
+        border-radius: 45px;
+        display: flex;
+        width: fit-content;
+        gap: 10px;
+        text-decoration: none;
+        align-items: center;
+        position: relative;
+        transition: 0.3s;
+    }
+    .projects .github-profile:hover {
+        color: var(--primary-hover);
+        transform: translateX(-50%) scale(1.1);
+    }
+    .projects .github-profile span {
+        font-family: cairo;
+        font-weight: 400;
+        letter-spacing: 1.3px;
+        text-align: center;
+    }
+    @media (max-width: 420px) {
+        .projects .github-profile {
+            margin-top: 30px;
+            width: 70%;
+            justify-content: space-between;
+        }
+        .projects .github-profile span{
+            font-size: 12px;
+        }
+         .projects .github-profile::before,
+        .projects .github-profile::after {
+            display: none;
+        }
+    }
+    .projects .github-profile::before {
+        content: "";
+        position: absolute;
+        left: -130px;
+        width: 100px;
+        height: 1px;
+        background-color: red;
+    }
+    .projects .github-profile::after {
+        content: "";
+        position: absolute;
+        right: -130px;
+        width: 100px;
+        height: 1px;
+        background-color: red;
+    }
+    /* End Style Of GitHub Profile Btn */
     /* End Style of Projects-boxs */
 
     /* End Projects Section */
