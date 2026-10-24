@@ -1,0 +1,200 @@
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --bg-color: #0D0D0D;
+    --secondary-bg: #151515;
+
+    --primary-color: #C62828;
+    --primary-hover: #E53935;
+
+    --text-color: #F5F5F5;
+    --secondary-text: #A7A7A7;
+
+    --border-color: #292929;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+.container {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+@media (max-width: 767px) {
+    .container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+/* Start Main */
+
+/* Start About Me Section */
+    .about .container {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        position: relative;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @media (max-width: 991px) {
+            .about .container {
+                flex-direction: column;
+            }
+    }
+    .about .container::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+        .about .image {
+            width: 250%;
+            height: fit-content;
+        }
+        @media (min-width: 1200px) {
+            .about .image {
+                width: 250%;
+            }
+        }
+        @media (max-width: 1199px) {
+            .about .image {
+                width: 300%;
+            }
+        }
+        @media (max-width: 991px) {
+            .about .image {
+                width: 100%;
+            }
+        }
+        .about .image img {
+            width: 100%;
+        }
+        .about .container .info {
+            color: white;
+            max-width: 100%;
+        }
+        .about .container .info .first {
+            letter-spacing: 3px;
+            color: var(--secondary-text);
+            padding-left: 45px;
+            position: relative;
+        }
+        .about .container .info .first::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: #E53935;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .about .container .info .second {
+            margin: 0;
+            margin-top: 10px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .about .container .info .third {
+            margin: 0;
+            font-weight: bold;
+            font-size: 50px;
+            color: var(--primary-color);
+        }
+        .about .container .info .track {
+            letter-spacing: 6px;
+            font-size: 18px;
+            color: var(--secondary-text);
+            margin: 20px 0;
+        }
+        .about .container .info .about-p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: #ede3e3;
+            letter-spacing: 1.5px;
+        }
+        .about .container .info .mixed-box {
+            display: flex;
+            gap: 15px;
+            justify-content: space-between;
+            margin-top: 25px;    
+            flex-wrap: wrap;
+        }
+        .about .container .info .mixed-box .line {
+            width: 1px;
+            background-color: var(--secondary-text);
+            height: 99px;
+        }
+        @media (max-width: 720px) {
+            .about .container .info .mixed-box {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .about .container .info .mixed-box .line {
+                width: 99px;
+                height: 1px;
+                display: inline-block;
+                margin: 0 30px;
+            }
+        }
+        .about .info .mixed-box .box {
+            display: flex;
+            gap: 15px;
+        }
+        .about .info .mixed-box .box .text span {
+            font-size: 12px;
+            color: var(--secondary-text);
+            letter-spacing: 2px;
+        }
+        .about .info .mixed-box .box .text h3 {
+            margin: 0;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+        .about .info .mixed-box .box .text p {
+            color: var(--secondary-text);
+            font-weight: 400;
+            margin: 0;
+            font-size: 14px;
+        }
+        .about .info .mixed-box .box i {
+            color: red;
+            font-size: 25px;
+        }
+        .about .info button {
+            padding: 0;
+            border-radius: 10px;
+            margin-top: 25px;
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+        }
+        .about .info button a {
+            text-decoration: none;
+            color: white;
+            letter-spacing: 1.3px;
+            padding: 15px 20px;
+            display: block;
+        }
+        .about .info button:hover a i {
+            transform: translateX(5px);
+        }
+        .about .info button a i {
+            margin-left: 10px;
+            transition: 0.3s;
+            color: var(--secondary-text);
+        }
+    /* End About Me Section */
+
+/* End Main */

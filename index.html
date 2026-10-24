@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Osama | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS_Files/Header_Style.css">
+    <link rel="stylesheet" href="CSS_Files/Hero_Style.css">
+    <link rel="stylesheet" href="CSS_Files/About_Style.css">
+    <link rel="stylesheet" href="CSS_Files/Skills_Style.css">
+    <link rel="stylesheet" href="CSS_Files/Projects_Style.css">
+    <link rel="stylesheet" href="CSS_Files/Contact_Style.css">
+    <!-- Font Awesome Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -250,12 +257,12 @@
         <!-- End Skills -->
         <!-- Start Projects -->
         <section class="projects" id="projects">
-          <div class="title">
+          <div class="container">
+            <div class="title">
               <span class="first">MY Work</span>
               <div class="title-name">P<span>ROJECTS</span></div>
               <div class="p">A collection of my personal projects that showcase my skills, creativity, and passion for  building modern web experiences.</div>
-          </div>
-          <div class="container">
+            </div>
             <div class="classification-box">
               <div class="class active all">
                 <span>All</span>
@@ -594,7 +601,100 @@
         <!-- End Projects -->
         <!-- Start Contact -->
         <section class="contact" id="contact">
+          <div class="container">
+            <div class="main-head">
+              <span>GET IN TOUCH</span>
+              <h3 class="sec-title">Contact <span>Me</span></h3>
+              <p class="main-head-del">
+                Have a project in mind, a question, or just want to say hi?
+                Feel free to reach out -- I'm always open to new opportunties and colaborations.
+              </p>
+            </div>
 
+            <div class="contact-container">
+              <div class="details">
+                <div class="my-details">
+                  <div class="box">
+                    <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+                    <div class="info">
+                      <span>Email</span>
+                      <p>moh9180812@gmail.com</p>
+                    </div>                    
+                  </div>
+
+                  <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info">
+                      <span>Phone</span>
+                      <p>+20 103 297 8488</p>
+                    </div>                    
+                  </div>
+
+                  <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info">
+                      <span>Location</span>
+                      <p>Markaz Sherbin, Dakahlia, Egypt</p>
+                    </div>                    
+                  </div>
+
+                  <div class="box">
+                    <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="info">
+                      <span>Availabilty</span>
+                      <p>mon - fri | 10:00 AM (EET)</p>
+                    </div>                    
+                  </div>
+
+                </div>
+                <div class="social">
+                  <div class="head">
+                    <h3>Follow Me</h3>
+                    <p>Let's connect on social media !</p>
+                  </div>
+                  <div class="social-links">
+                    <div class="link"><a class="git" href="#"><i class="fa-brands fa-github"></i></a></div>
+                    <div class="link"><a class="in" href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                    <div class="link"><a class="insta" href="#"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div class="link"><a class="face" href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
+                    <div class="link"><a class="you" href="#"><i class="fa-brands fa-youtube"></i></a></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form">
+                <form action="">
+                  <div class="first-line">
+                    <div class="name-input">
+                      <i class="fa-regular fa-user"></i>
+                      <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="email-input">
+                      <i class="fa-regular fa-envelope"></i>
+                      <input type="email" placeholder="Your Email" required>
+                    </div>
+                  </div>
+                  <div class="second-line">
+                    <div class="subject-input">
+                      <i class="fa-solid fa-file-lines"></i>
+                      <input type="text" placeholder="Subject" required>
+                    </div>
+                  </div>
+                  <div class="third-line">
+                    <div class="text-input">
+                      <i class="fa-solid fa-comment-dots"></i>
+                      <textarea placeholder="Your Message ..." required></textarea>
+                    </div>
+                  </div>
+                  <div class="forth-line">
+                      <i class="fa-solid fa-paper-plane"></i>
+                      <input type="submit" value="Send Message">
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
         </section> 
         <!-- End Contact -->
     </main>
@@ -604,6 +704,7 @@
 
     </footer> 
     <!-- End Footer -->
+     <!-- <marquee behavior="" direction=""><span>Html</span><span>css</span><span>javascript</span></marquee> -->
 
     <script src="main.js"></script>
 </body>

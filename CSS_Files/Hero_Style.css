@@ -1,0 +1,184 @@
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --bg-color: #0D0D0D;
+    --secondary-bg: #151515;
+
+    --primary-color: #C62828;
+    --primary-hover: #E53935;
+
+    --text-color: #F5F5F5;
+    --secondary-text: #A7A7A7;
+
+    --border-color: #292929;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+.container {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+@media (max-width: 767px) {
+    .container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+/* Start Main */
+    /* Start Hero Section */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;
+        position: relative;
+        height: fit-content;
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+    @media (max-width: 767px) {
+    .hero {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    }
+    @media (max-width: 850px) {
+        .hero {
+            justify-content: center;
+        }
+    }
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+    .hero .info {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+    }
+    @media (max-width: 850px) {
+        .hero .info {
+            margin: 0 30px;
+        }
+    }
+    @media (max-width: 767px) {
+        .hero .info {
+            margin: 0;
+        }
+    }
+    .hero .info .start {
+        color: var(--secondary-text);
+        font-size: 24px;
+    }
+    .hero .info .name {
+        font-size: 60px;
+        font-weight: bold;
+        color: var(--text-color);
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .hero .info .name span {
+        font-size: 50px;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+    .hero .info .track {
+        font-size: 28px;
+        color: var(--secondary-text);
+    }
+    .hero .info hr {
+        background-color: var(--primary-color);
+        width: 100px;
+        height: 2px;
+        border: none;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+    .hero .info p {
+        color: var(--text-color);
+        letter-spacing: 2px;
+        font-size: 18px;
+    }
+    .hero .info .skills-t {
+        display: flex;
+        margin-top: 20px;
+        padding-left: 0;
+        gap: 60px;
+    }
+    .hero .info .skills-t .skill {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero .info .skills-t .skill i {
+        font-size: 50px;
+        margin-bottom: 5px;
+    }
+    .hero button {
+        width: fit-content;
+        margin-top: 20px;
+        background-color: transparent;
+        border: 1px solid red !important;
+        border-radius: 10px;
+        overflow: hidden;
+        border: none;
+        padding: 15px 25px;
+        padding-right: 30px;
+        transition: 0.3s;
+        cursor: pointer;
+        margin-top: 40px;
+    }
+    .hero button:hover ~ button a {
+        color: var(--secondary-text);
+    }
+    .hero button a {
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+    .hero button a i {
+        color: var(--secondary-text);
+        margin-left: 10px;
+        transition: 0.3s;
+    } 
+    .hero button:hover a i {
+        transform: translateX(5px);
+    }
+    .hero .image {
+        overflow: hidden;
+        border-radius: 20px;
+        border: 2px solid rgba(255, 50, 50, 0.7);
+        box-shadow: 0 20px 50px  rgba(180, 0, 0, 0.25), 0 0 35px rgba(255, 40, 40, 0.15);
+        animation: scale 2s  ease-in-out infinite;
+        height: fit-content;
+        max-height: 600px;
+        max-width: 450px;
+    }
+    @media (max-width: 830px) {
+        .hero .image {
+            display: none;
+        }
+    }
+    .hero .image img {
+        width: 100%;
+        height: 100%;
+    }
+    /* End Hero Section */
+/* End Main */
