@@ -653,37 +653,39 @@
                     <p>Let's connect on social media !</p>
                   </div>
                   <div class="social-links">
-                    <div class="link"><a class="git" href="#"><i class="fa-brands fa-github"></i></a></div>
-                    <div class="link"><a class="in" href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
-                    <div class="link"><a class="insta" href="#"><i class="fa-brands fa-instagram"></i></a></div>
-                    <div class="link"><a class="face" href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
-                    <div class="link"><a class="you" href="#"><i class="fa-brands fa-youtube"></i></a></div>
+                    <div class="link"><a class="git" href="https://github.com/moh9180812-cyber"><i class="fa-brands fa-github"></i></a></div>
+                    <div class="link"><a class="in" href="https://www.linkedin.com/in/mohamed-osama-729365387?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                    <div class="link"><a class="insta" href="https://www.instagram.com/boulder_53?cplk=cWEwOTg4a3dhOThk"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div class="link"><a class="face" href="https://www.facebook.com/share/1EKQdhoJML/"><i class="fa-brands fa-facebook-f"></i></a></div>
+                    <div class="link"><a class="you" href="https://youtube.com/@boulderr53?si=_bsE21yjrgP8G2xh"><i class="fa-brands fa-youtube"></i></a></div>
+                    <div class="link"><a class="twit" href="https://x.com/MOsama51040"><i class="fa-brands fa-x-twitter"></i></a></div>
+                    <div class="link"><a class="tik" href="https://www.tiktok.com/@m.boulder_53?_r=1&_t=ZS-9AqQ1ST9iCq"><i class="fa-brands fa-tiktok"></i></a></div>
                   </div>
                 </div>
               </div>
 
               <div class="form">
-                <form action="">
+                <form id="contact-form">
                   <div class="first-line">
                     <div class="name-input">
                       <i class="fa-regular fa-user"></i>
-                      <input type="text" placeholder="Your Name" required>
+                      <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="email-input">
                       <i class="fa-regular fa-envelope"></i>
-                      <input type="email" placeholder="Your Email" required>
+                      <input type="email" name="subject" placeholder="Your Email" required>
                     </div>
                   </div>
                   <div class="second-line">
                     <div class="subject-input">
                       <i class="fa-solid fa-file-lines"></i>
-                      <input type="text" placeholder="Subject" required>
+                      <input type="text" name="subject" placeholder="Subject" required>
                     </div>
                   </div>
                   <div class="third-line">
                     <div class="text-input">
                       <i class="fa-solid fa-comment-dots"></i>
-                      <textarea placeholder="Your Message ..." required></textarea>
+                      <textarea name="messagge" placeholder="Your Message ..." required></textarea>
                     </div>
                   </div>
                   <div class="forth-line">
@@ -691,6 +693,7 @@
                       <input type="submit" value="Send Message">
                   </div>
                 </form>
+                <p id="form-status" role="status" aria-live="polite"></p>
               </div>
 
             </div>
@@ -706,6 +709,7 @@
     <!-- End Footer -->
      <!-- <marquee behavior="" direction=""><span>Html</span><span>css</span><span>javascript</span></marquee> -->
 
-    <script src="main.js"></script>
+    <script src="Script_Files/main.js"></script>
+    <script src="Script_Files/form.js"></script>
 </body>
 </html>

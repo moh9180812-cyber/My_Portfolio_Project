@@ -216,6 +216,7 @@ body {
         max-width: 100%;
         flex-wrap: wrap;
         height: fit-content;
+        justify-content: center;
     }
     main .contact .contact-container .details .social .social-links .link a {
         padding: 13px;
@@ -228,6 +229,7 @@ body {
         height: 45px;
         justify-content: center;
         align-items: center;
+        transition: 0.3s;
     }
     main .contact .contact-container .details .social .social-links .link i {
         font-size: 18px;
@@ -248,6 +250,9 @@ body {
         color: rgba(22, 108, 229, 0.84);
         transform: scale(1.1);
     }
+    main .contact .contact-container .details .social .social-links .link .in:hover {
+        background-color: white;
+    }
     main .contact .contact-container .details .social .social-links .link .insta i {
         color: rgba(233, 21, 134, 0.827);
         transition: 0.3s;
@@ -255,6 +260,9 @@ body {
     main .contact .contact-container .details .social .social-links .link .insta:hover i {
         color: rgba(218, 26, 128, 0.556);
         transform: scale(1.1);
+    }
+    main .contact .contact-container .details .social .social-links .link .insta:hover {
+        background-color: white;
     }
     main .contact .contact-container .details .social .social-links .link .face i {
         color: white;
@@ -264,6 +272,9 @@ body {
         color: rgb(0, 76, 255);
         transform: scale(1.1);
     }
+    main .contact .contact-container .details .social .social-links .link .face:hover {
+        background-color: white;
+    }
     main .contact .contact-container .details .social .social-links .link .you i {
         color: var(--primary-color);
         transition: 0.3s;
@@ -272,6 +283,28 @@ body {
         color: #E53935;
         transform: scale(1.1);
     }
+    main .contact .contact-container .details .social .social-links .link .twit i {
+        color: white;
+        transition: 0.3s;
+    }
+    main .contact .contact-container .details .social .social-links .link .twit:hover i {
+        color: rgb(10, 10, 29);
+        transform: scale(1.1);
+    }
+    main .contact .contact-container .details .social .social-links .link .twit:hover {
+        background-color: white;
+    }
+    main .contact .contact-container .details .social .social-links .link .tik i {
+        color: white;
+        transition: 0.3s;
+    }
+    main .contact .contact-container .details .social .social-links .link .tik:hover i {
+        color: rgb(10, 10, 29);
+        transform: scale(1.1);
+    }
+    main .contact .contact-container .details .social .social-links .link .tik:hover {
+        background-color: white;
+    }
     /* End Style of Details Side */
     /* Start Style of Form */
     main .contact .contact-container .form {
@@ -279,6 +312,7 @@ body {
         border: 1px solid var(--border-color);
         background-color: #1515155c;
         border-radius: 15px;
+        height: fit-content;
     }
     main .contact .contact-container .form form {
         display: flex;
@@ -492,6 +526,14 @@ body {
         border: none;
         padding-right: 54px;
     }
+    /* main .contact .contact-container .form > p {
+        padding: 10px 20px;
+        border: 1px solid var(--primary-hover);
+        text-align: center;
+        min-width: 90%;
+        color: white;
+        border-radius: 10px;
+    } */
     /* End Style of Form */
     /* End Style Of Contact Container */
     /* End Contact Section */
