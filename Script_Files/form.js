@@ -38,3 +38,39 @@ try {
 
 });
 
+
+
+//  Suscribe Form
+const subscribeForm = document.getElementById("subscribe-form");
+
+subscribeForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = subscribeForm.querySelector('input[name="email"]').value;
+
+    const formData = new FormData();
+
+    formData.append("email", email);
+    formData.append("_subject", "New Newsletter Subscriber");
+
+    try {
+        const response = await fetch("https://formspree.io/f/xgopbqzn", {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            alert("Thank you for subscribing!");
+            subscribeForm.reset();
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+
+    } catch (error) {
+        alert("Network error. Please try again later.");
+        console.error(error);
+    }
+});
