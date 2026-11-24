@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moh9180812-cyber.github.io/My_Portfolio_Project/sitemap.xml
